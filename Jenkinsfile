@@ -13,7 +13,7 @@ pipeline {
       }
       stage("Tests") {
          steps {
-            sh "cd web & robot -d ./logs -i smoke tests"
+            sh "robot -d ./logs -i smoke tests"
          }
          post {
             always {
